@@ -1,0 +1,41 @@
+
+.start{
+  color: rgb(145, 207, 150);
+  background-color: rgb(16, 16, 16);
+  font-size: 20px;
+  width: 100px;
+  height: 60px;
+}
+
+
+.in-frame{
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+  row-gap: 10%;
+  column-gap: 2%;
+  position: absolute;
+  top: 10%;left: 15%; height: 78%; width: 68%;
+}
+
+.card{
+
+  float: left;
+  width: 200px;
+  height: 286px;
+  background-color: rgb(5, 32, 6);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  margin: 0 auto;
+}
+ 
+.back{
+  position: absolute;
+  background-image: url('ura.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  margin: 0 auto;
+  visibility: visible;
+}
+
+
