@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="cardGame.js"></script>
+  <link rel="stylesheet" href="cardGame.css">
+  <title>神経衰弱</title>
+</head>
+
+<body>
+<button class="start" onclick="gamestart()" >GAME START</button>
+  <div class="in-frame" id="frame">
+
+    <div class="card" id="Fr1" onclick="turnCards('back1','Fr1')" ><div class="card back" id="back1"></div></div>
+    <div class="card" id="Fr2" onclick="turnCards('back2')" ><div class="card back" id="back2"></div></div>
+    <div class="card" id="Fr3" onclick="turnCards('back3')" ><div class="card back" id="back3"></div></div>
+    <div class="card" id="Fr4" onclick="turnCards('back4')" ><div class="card back" id="back4"></div></div>
+    <div class="card" id="Fr5" onclick="turnCards('back5')" ><div class="card back" id="back5"></div></div>
+    <div class="card" id="Fr6" onclick="turnCards('back6')" ><div class="card back" id="back6"></div></div>
+    <div class="card" id="Fr7" onclick="turnCards('back7')" ><div class="card back" id="back7"></div></div>
+    <div class="card" id="Fr8" onclick="turnCards('back8')" ><div class="card back" id="back8"></div></div>
+    <div class="card" id="Fr9" onclick="turnCards('back9')" ><div class="card back" id="back9"></div></div>
+    <div class="card" id="Fr10" onclick="turnCards('back10')" ><div class="card back" id="back10"></div></div>
+
+    
+  </div>
+
+<script>
+
+let flipCard = [];
+
+function turnCards(BackId){
+  turnCard = document.getElementById(BackId)
+    if(turnCard.style.visibility === "visible"){
+      turnCard.style.visibility= "hidden";
+      // flipCard = turnCards.style.back
+      // console.log(turnCard.style.visibility);
+    }else {
+      turnCard.style.visibility= "visible";
+      // console.log(turnCard.style.visibility);
+    }
+}
+
+function gamestart(){
+
+  for (let i = 10; i > 0; i-- ){
+    turnCards(`back${i}`)
+    turnCard = document.getElementById(`back${i}`)
+    turnCard.style.visibility= "visible";
+
+  }
+  console.log("GAME START!")
+}
+
+</script>
+
+
+
+
+</body>
+
+</html>
