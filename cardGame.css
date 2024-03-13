@@ -1,7 +1,7 @@
 
 .start{
   color: rgb(145, 207, 150);
-  background-color: rgb(16, 16, 16);
+  background-color: rgb(46, 46, 46);
   font-size: 20px;
   width: 100px;
   height: 60px;
@@ -19,7 +19,6 @@
 }
 
 .card{
-
   float: left;
   width: 200px;
   height: 286px;
@@ -39,3 +38,6 @@
 }
 
 
+#frame{
+  pointer-events: none;  
+}
