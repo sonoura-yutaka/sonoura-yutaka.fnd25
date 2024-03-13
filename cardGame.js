@@ -2,7 +2,7 @@
 // 1行目に記載している 'use strict' は削除しないでください
 
 
-    let cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let cards = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5];
     const shaffleCards = [];
 
 
@@ -41,3 +41,14 @@ window.onload = function () {
 
 
 }
+
+
+// window.onload = function () {
+// console.log(document.getElementById( `cardF1` ))
+// }
+
+
+
+
+
+
