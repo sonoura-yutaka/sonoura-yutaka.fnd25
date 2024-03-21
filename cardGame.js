@@ -5,12 +5,14 @@ let checkArray = [];//判定用のアレイ　グローバル変数やめる方�
 const dealobj = {};//配られたカードの情報を入れるobj 
 let intervalTime = 1000//カウントダウンの時間
 let finishCount = 0;//クリアカウント用　＝ 5でゲームクリア
-
+let startTime = "";//自己満足のタイム計測用
+let clearTime = "";
 //クリア用の関数
 function allClear(){
   checkArray = [];
   finishCount = 0;
 }
+
 
 //整列した配列からランダムに抜き取り、シャッフルされた状態で配列にする
 function shuffleDraw() {
@@ -83,7 +85,9 @@ function matchCard(array) {
   if (finishCount === 5){//5ペア全てがクリアされたら
     const clearSE = new Audio("clear.mp3");
     clearSE.play();
+    clearTime = (Date.now() - startTime )/ 1000;
     console.log("GAME CLEAR!");
+    console.log(`クリアタイム: ${clearTime} 秒`)
     const end = document.getElementById("count");
     end.innerText = "【 CLEAR!! 】";
   }
@@ -112,6 +116,7 @@ function countdown(count){
       document.getElementById("frame").style.pointerEvents= "auto";//操作禁止になっているのを解除
       const dealSE = new Audio("deal.mp3");
       dealSE.play();
+      startTime = Date.now();
       return console.log("GAME START");
     }
     const countSE = new Audio("count.mp3");
@@ -134,7 +139,6 @@ function cardClick(id){//クリックされたときの動作
     }
   }
 }
-
 
 
 
