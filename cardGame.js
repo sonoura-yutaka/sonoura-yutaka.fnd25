@@ -61,8 +61,6 @@ function cardflip(objs) {
     //2回目以降は画像だけ入替
     document.getElementById(cardObj).style.backgroundImage = "url(b" + objs[cardObj] + ".png)";
   }
-
-  return 
 }
 
 //2枚のカードが一致するか照合して真偽値を返す
